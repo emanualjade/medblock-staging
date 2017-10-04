@@ -1,4 +1,3 @@
-<!-- WORK IN PROGRESS - do not review -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,38 +6,45 @@
     <title>MedBlock Token Sale</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar-example">
 
-  <div class="site-wrapper">
-    <video autoplay  id="video-background" muted plays-inline>
-      <source src="/images/ekg.mp4" type="video/mp4">
-    </video>
+  <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+      <source src="/images/movie.mp4" type="video/mp4">
+  </video>
 
+  <div id="home" class="site-wrapper">
     <div class="site-wrapper-inner">
       <div class="cover-container">
-
-        <div id="masthead" class="masthead clearfix">
-          <div class="inner clearfix">
-            <!-- <img
-              src="/images/medblock_logo.png"
-            > -->
-            <h3 class="masthead-brand">MedBlock</h3>
-
-            <nav class="nav nav-masthead">
-              <a class="nav-link active" href="#">Home</a>
-              <a class="nav-link" href="#">About</a>
-              <a class="nav-link" href="#">News</a>
-              <a class="nav-link" href="#">Team</a>
-              <a class="nav-link" href="#">Contact</a>
-            </nav>
-          </div>
-        </div>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-example" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">MedBlock</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-example">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a id="home-nav-link" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
 
         <div class="inner cover">
-          
           <img
             class="cover__logo"
             src="/images/medblock_logo_lg.png"
@@ -50,17 +56,27 @@
              Decentralizing Health Care
           </h2>
           
-          <a href="#" class="btn btn-lg btn-dark cover__btn">
+          <button class="btn btn-lg btn-primary cover__btn" data-toggle="modal" data-target="#myModal">
               Sign up for the token pre-sale
-          </a>
+          </button>
 
           <p class="cover__small-text">Pre-Sale Coming Soon</p>
-
-        </div>
-        
-        <div class="mastfoot">
-          <div class="inner">
-            <p>MedBlock <a href="https://getbootstrap.com">Social</a>, at <a href="https://twitter.com/mdo">@medblock</a>.</p>
+          <div class="social-icons">
+              <a href="">
+                <i class="fa fa-telegram" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-slack" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
           </div>
         </div>
 
@@ -71,73 +87,87 @@
   </div>
 
   <div class="points">
-    <div class="container">
+    <div class="container points-container">
       <div class="row">
-        <div class="col-4">
-          <div class="card">
-            <p>A Decentralized Electronic Health Record (EHR) System on a blockchain</p>
+        <div class="col-sm-4 item">
+          <div class="shape-circle">
+            <img src="/images/chain.svg">
           </div>
+          <h3>Health records on the blockchain</h3>
+          <p>A Decentralized Electronic Health Record (EHR) System on a blockchain</p>
         </div>
-        <div class="col-4">
-          <div class="card">
-            <p>The world's first EHR that gives each patient 100% open access to their medical history 24/7 from anywhere in the world</p>
+        <div class="col-sm-4 item">
+          <div class="shape-circle">
+            <img src="/images/global.svg">
           </div>
+          <h3>Access anywhere and anytime</h3>
+          <p>The world's first EHR that gives each patient 100% open access to their medical history 24/7 from anywhere in the world</p>
         </div>
-        <div class="col-4">
-          <div class="card">
-            <p>Being created by an all-star team from IBM Watson, BitShares and Steemit</p>
+        <div class="col-sm-4 item">
+          <div class="shape-circle">
+            <img src="/images/team.svg">
           </div>
+          <h3>Created by an all-star team</h3>
+          <p>Being created by an all-star team from IBM Watson, BitShares and Steemit</p>
         </div>
       </div>
     </div>
   </div>
     
-  <div class="content-strip section-benefits">
+  <div id="about" class="content-strip section-benefits">
     <div class="container">
       <h2 class="section-heading">Why MedBlock</h2>
         <div class="row section-benefits__row">
-            <div class="col-5">
-              <img class="img-fluid" src="http://via.placeholder.com/450x300">
+            <div class="col-sm-4">
+              <img class="img-responsive img-network" src="/images/tangle.svg">
             </div>
-            <div class="col-7">
-              <h3>Physician solutions</h3>
-              <p>Believe it or not, patients aren't the only group suffering from our modern healthcare. How about every doctor who aims to eradicate disease but is instead taught to manage and stabilize a patient's vitals long enough to discharge them and fill up the next bed? Not to mention, our doctors are assigned floors of patients to deal with each day and barely have even 15 minutes to spend with each patient. Physicians don't have enough TIME and all the stress in the world!</p>        
+            <div class="col-sm-7 col-sm-offset-1 col-content">
+              <div class="content">
+                <h3>Physician solutions</h3>
+                <p>Believe it or not, patients aren't the only group suffering from our modern healthcare. How about every doctor who aims to eradicate disease but is instead taught to manage and stabilize a patient's vitals long enough to discharge them and fill up the next bed? Not to mention, our doctors are assigned floors of patients to deal with each day and barely have even 15 minutes to spend with each patient. Physicians don't have enough TIME and all the stress in the world!</p>        
+              </div>
             </div>
         </div>
         
         <div class="row section-benefits__row">
-            <div class="col-7">
-              <h3>Patient solutions</h3>
-              <p>Do you know what is the biggest problem in healthcare today? We don't even have access to our own medical information! We are rarely if ever told the complete truth about what's really going on in our bodies and as a result, we - the patients - are continuously marginalized and left to the whim of greedy administrators who treat healthcare like any another business.</p>        
+            <div class="col-sm-4 col-sm-offset-1 col-sm-push-7">
+                <img class="img-responsive img-network" src="/images/tangle.svg">
             </div>
-            <div class="col-5">
-                <img class="img-fluid" src="http://via.placeholder.com/450x300">
-            </div>
+            <div class="col-sm-7 col-sm-pull-5 col-content">
+                <div class="content">
+                  <h3>Patient solutions</h3>
+                  <p>Do you know what is the biggest problem in healthcare today? We don't even have access to our own medical information! We are rarely if ever told the complete truth about what's really going on in our bodies and as a result, we - the patients - are continuously marginalized and left to the whim of greedy administrators who treat healthcare like any another business.</p>
+                </div>
+              </div>
         </div>
 
         <div class="row section-benefits__row">
-            <div class="col-5">
-                <img class="img-fluid" src="http://via.placeholder.com/450x300">
+            <div class="col-sm-4">
+                <img class="img-responsive img-network" src="/images/tangle.svg">
             </div>
-            <div class="col-7">
-              <h3>Professional staff solutions</h3>
-              <p>If we're going to mention how doctors are overwhelmed by the current system, how about a shout-out for the nurses who have to stay overnight multiple times each week while dealing with a dearth of resources at hospitals, clinics and rehab centers as well as record systems that remain disorganized, siloed and difficult to use. Nurses are not rewarded properly for the extraordinary amount of time they spend with their patients. </p>        
+            <div class="col-sm-7 col-sm-offset-1 col-content">
+              <div class="content">
+                <h3>Professional staff solutions</h3>
+                <p>If we're going to mention how doctors are overwhelmed by the current system, how about a shout-out for the nurses who have to stay overnight multiple times each week while dealing with a dearth of resources at hospitals, clinics and rehab centers as well as record systems that remain disorganized, siloed and difficult to use. Nurses are not rewarded properly for the extraordinary amount of time they spend with their patients. </p>        
+              </div>
             </div>
         </div>
         
         <div class="row section-benefits__row">
-          <div class="col-7">
-            <h3>The MedBlock solution</h3>
-            <p>Fortunately, there is something we can do about this with blockchain technology - and MedBlock is our solution!</p>
-            <p>MedBlock is a Decentralized Electronic Health Record (EHR) system on the blockchain that will reform healthcare around the world by finally placing the entire depth of a patient's medical history in the hands of their rightful owners - not hospitals, not insurance providers, not pharmaceuticals - but the patients themselves! </p>
+          <div class="col-sm-4 col-sm-offset-1 col-sm-push-7">
+            <img class="img-responsive img-network" src="/images/tangle.svg">
           </div>
-          <div class="col-5">
-            <img class="img-fluid" src="http://via.placeholder.com/450x300">
+          <div class="col-sm-7 col-sm-pull-5 col-content">
+            <div class="content">
+              <h3>The MedBlock solution</h3>
+              <p>Fortunately, there is something we can do about this with blockchain technology - and MedBlock is our solution!</p>
+              <p>MedBlock is a Decentralized Electronic Health Record (EHR) system on the blockchain that will reform healthcare around the world by finally placing the entire depth of a patient's medical history in the hands of their rightful owners - not hospitals, not insurance providers, not pharmaceuticals - but the patients themselves! </p>
+            </div>
           </div>
         </div>
     </div>
   </div>
-  <div class="content-strip content-strip--muted section-news">
+  <div id="news" class="content-strip content-strip--muted section-news">
     <div class="container">
         <div class="section-heading-group">
           <h2 class="section-heading">News</h2>
@@ -179,19 +209,21 @@
 
     </div>
   </div>
-  <div class="content-strip section-team">
+  <div id="team" class="content-strip section-team">
     <div class="container">
       
       <div class="section-heading-group">
-        <h2 class="section-heading">The Medblock Team</h2>
-        <p>Say hello to the brains behind Medblock</p>
+        <h2 class="section-heading">The MedBlock Team</h2>
+        <p>Say hello to the brains behind MedBlock</p>
       </div>
 
       <ul class="list-unstyled">
-        <li class="media section-team__bio">
-          <img class="d-flex mr-3" src="/images/asad.jpg" alt="Generic placeholder image">
+        <li class="section-team__bio media media-stack-xs">
+          <div class="media-left">
+            <img class="media-object section-team__image" src="/images/asad.jpg" alt="Asad Mahmood">
+          </div>
           <div class="media-body">
-            <h3 class="mt-0 mb-1 section-team__heading">
+            <h3 class="media-heading section-team__heading">
               Asad Mahmood, M.D.
             </h3>
             
@@ -203,19 +235,24 @@
             </a>
             <a href="https://steemit.com/@cerebralace" class="section-team__icon" target="_blank">
               <i class="fa fa-globe" aria-hidden="true"></i>
-            </a>
-            
+            </a>     
             
             <p class="section-team__subheading">Co-Fouonder and CEO</p>
             <p class="section-team__emphasis">IBM Watson &middot; Biomedical Engineer &middot; Computer Scientist &middot; Medical Doctor</p>
-            <p>Asad Mahmood is a Biomedical Engineer at IBM Federal Healthcare, where he builds cloud based machine learning applications for Federal Healthcare agencies. These Federal Healthcare agencies include Civilian Healthcare (e.g. NIH, FDA, CDC) as well as Defense Healthcare (e.g. DHA, MHS, VA).</p>
-            <p>Asad is well respected at IBM for building IBM Virtual Doc and IBM Cognitive Health. Virtual Doc is a web application that uses Machine Learning to determine real-time diagnoses for new patients. Cognitive Health is an application powered by IBM Watson, which computes a patient’s Behavioral Health profile comprising of a psychiatric diagnosis, suicide risk score and real-time social media personality analysis.</p>
+            <div class="section-team__bio-text">
+              <p>Asad Mahmood is a Biomedical Engineer at IBM Federal Healthcare, where he builds cloud based machine learning applications for Federal Healthcare agencies. These Federal Healthcare agencies include Civilian Healthcare (e.g. NIH, FDA, CDC) as well as Defense Healthcare (e.g. DHA, MHS, VA).</p>
+              <p>Asad is well respected at IBM for building IBM Virtual Doc and IBM Cognitive Health. Virtual Doc is a web application that uses Machine Learning to determine real-time diagnoses for new patients. Cognitive Health is an application powered by IBM Watson, which computes a patient’s Behavioral Health profile comprising of a psychiatric diagnosis, suicide risk score and real-time social media personality analysis.</p>
+            </div>
+
           </div>
         </li>
-        <li class="media my-4 section-team__bio">
-          <img class="d-flex mr-3" src="/images/ian.jpg" alt="Generic placeholder image">
+
+        <li class="section-team__bio media media-stack-xs">
+          <div class="media-left">
+            <img class="media-object section-team__image" src="/images/ian.jpg" alt="Generic placeholder image">
+          </div>
           <div class="media-body">
-            <h3 class="mt-0 mb-1 section-team__heading">Ian Balina</h3>
+            <h3 class="media-heading section-team__heading">Ian Balina</h3>
 
             <a href="https://www.linkedin.com/in/ianbalina" class="section-team__icon" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
             <a href="https://twitter.com/diaryofamademan" class="section-team__icon" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
@@ -223,16 +260,16 @@
 
             <p class="section-team__subheading">Co-Fouonder and COO</p>
             <p class="section-team__emphasis">IBM Watson &middot; IBM Open Source &middot; Deloitte Consulting</p>
-            <p>Ian is a well respected name in technology and entrepreneurship and is the author of the book, The Complete Freelancer Guide. He has been featured in Forbes, INC, and The Wall Street Journal for his work. An avid cryptocurrency investor, Ian is one of the biggest social media influencers when it comes to blockchain projects.</p>
+            <div class="section-team__bio-text">
+              <p>Ian is a well respected name in technology and entrepreneurship and is the author of the book, The Complete Freelancer Guide. He has been featured in Forbes, INC, and The Wall Street Journal for his work. An avid cryptocurrency investor, Ian is one of the biggest social media influencers when it comes to blockchain projects.</p>
+            </div>
           </div>
         </li>
       </ul>
-
-
     </div>
   </div>
 
-  <div class="content-strip content-strip--dark section--contact">
+  <div id="contact" class="content-strip content-strip--dark section--contact">
     <div class="container">
       <h2 class="section-heading">Contact us</h2>
 
@@ -253,8 +290,29 @@
 
     </div>
   </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Pre-sale</h4>
+        </div>
+        <div class="modal-body">
+          Sign up for the token pre-sale
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>

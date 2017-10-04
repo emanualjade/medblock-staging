@@ -1,0 +1,27 @@
+// .section-news__row:not(:last-child) {
+//   margin-bottom: 40px;
+// }
+
+.section-news__row {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  @media(min-width: 768px) {
+    max-width: none;
+    margin: 0 0 40px 0;
+  }
+}
+
+.news-title {
+  display: inline-block;
+  color: #4678cd;
+  font-weight: 300;
+  border-top-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  font-size: 26px;
+  margin-bottom: 17px;
+}
+.news-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2em;
+}

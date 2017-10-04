@@ -1,11 +1,11 @@
 function initNavEffects() {
-  var masthead = $('#masthead')
+  var navbar = $('.navbar')
   $(window).scroll(function(){
     
     if ($(window).scrollTop() > 100) {
-      masthead.addClass('is-active');
+      navbar.addClass('is-active');
     } else {
-      masthead.removeClass('is-active');
+      navbar.removeClass('is-active');
     }
 
   });

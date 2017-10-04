@@ -1,0 +1,55 @@
+.points {
+  background: #f1f7ff;
+  text-align: center;
+  padding: 40px 0;
+  img {
+    width: 100%;
+    max-width: 50px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    // color: #174780;
+    font-weight: 600;
+  }
+  p {
+    color: #8D9397;
+    font-size: 16px;
+  }
+  .item:not(:last-child) {
+    margin-bottom: 40px;
+    @media(min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.points-container{
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    background: #add0ff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    display: none;
+    @media(min-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.shape-circle {
+  display: inline-block;
+  background: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  margin-bottom: 0;
+  box-shadow: 2px 3px 6px rgba(201, 201, 202, 0.62);
+  @media(min-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
